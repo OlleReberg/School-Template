@@ -6,7 +6,9 @@ Keyword |                  Summary                   | Sample Code | Mentioned I
 `//`    | Used for single-line comments              | `float multiplier = 0.01f; // % to float (e.g. 24% = 0.24)` | [Comments](https://github.com/marczaku/csharp-basics/blob/main/slides/003.3.1-console-basics-1.md#single-line-comments)
 Variable Initialization | When a value is assigned to a variable for the first time | `int a = 5;` | [Variables](https://github.com/marczaku/csharp-basics/blob/main/slides/003.3.1-console-basics-1.md#variable-initialization)
 `dotnet new console -o project-name` | How to start new C# project from command prompt | ? | ?
-Script Execution Order | ? | ? | ?
+Script Execution Order | C# Code is executed from top to bottom.
+Every statement in C# needs to be separated by a Semicolon ;
+Empty statements are okay. | ? |https://github.com/marczaku/csharp-basics/blob/main/slides/003.3.1-console-basics-1.md
 Formatting | ? | ? | ?
 `Console.WriteLine` | Used to print out text when running program. "cw" can be used as a shortcut for it | ? | ?
 `Console.Write` | ? | ? | ?
