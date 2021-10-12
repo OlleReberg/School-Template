@@ -14,7 +14,7 @@ Formatting |The language cares about whitespaces, tabs and newlines only as a wa
 `Console.Write` | If you don't want new line after output | ? | ?
 Multi-Line Comment | Another useful tool for larger comments are multi-line comments.
 They are started by using the /*
-And they end at the next occurence of a */ | ? | ?
+And they end at the next occurence of a */ (multiline comments)| ? | ?
 XML Documentation Comment | // to comment, <summary>adds a neat summary</summary> can also use <param></param>| As an experienced programmer, you want to avoid spamming your code with unnecessary comment spam
 As an inexperienced programmer, you just want to make sure to understand wth you doin| ?
 Variable | Variables are used to store info. It allows us to assign value to something with a name of our choice | ? | ?
@@ -59,60 +59,73 @@ They take two numbers as input and return a number as output | int div = 9 / 3; 
 `--` | -1 | ? | ?
 Post-Increment `i++` | Depending if ++ used before or after variable(i.e. ++i vs i++), the i+1 will happen before or after CW | ? | ?
 Pre-Increment `++i` | ? | ? | ?
-`System.Math` | ? | ? | new slide https://github.com/marczaku/csharp-basics/blob/main/slides/003.3.2-console-basics-2.md
-`static` | ? | ? | ?
-`Math.Max` | ? | ? | ?
-`Math.Min` | ? | ? | ?
-`Math.Sqrt` | ? | ? | ?
-`Math.Abs` | ? | ? | ?
-`Math.Round` | ? | ? | ?
-`Math.Floor` | ? | ? | ?
-`Math.Ceiling` | ? | ? | ?
-`Math.Clamp` | ? | ? | ?
-`Math.Pow` | ? | ? | ?
-`string.Length` | ? | ? | ?
-`string.ToUpper` | ? | ? | ?
-`string.+` | ? | ? | ?
-`$"{}"` | ? | ? | ?
-`string.[]` | ? | ? | ?
-`string.IndexOf` | ? | ? | ?
-`string.SubString(int)` | ? | ? | ?
-`string.Substring(int, int)` | ? | ? | ?
-`string.Replace` | ? | ? | ?
-immutable | ? | ? | ?
-Logical Operators | ? | ? | ?
-`!` | ? | ? | ?
-`&&` | ? | ? | ?
-`||` | ? | ? | ?
-Comparison Operators | ? | ? | ?
-`>` | ? | ? | ?
-`==` | ? | ? | ?
-`!=` | ? | ? | ?
-`||` | ? | ? | ?
-`>=` | ? | ? | ?
-`<=` | ? | ? | ?
-`if` | ? | ? | ?
-`else` | ? | ? | ?
-`else if` | ? | ? | ?
-`? :` | ? | ? | ?
-Flow Control Statements | ? | ? | ?
-`System.Random` | ? | ? | ?
-pseudo-random | ? | ? | ?
-seed | ? | ? | ?
-`Random.Next(int, int)` | ? | ? | ?
-`Random.Next()` | ? | ? | ?
-`Random.NextDouble()` | ? | ? | ?
-`Random.Next()` | ? | ? | ?
-`while` | ? | ? | ?
-bool-expression | ? | ? | ?
-`do..while` | ? | ? | ?
-`for` | ? | ? | ?
-iteration statement | ? | ? | ?
-loop body | ? | ? | ?
-loop | ? | ? | ?
-execution | ? | ? | ?
-execution jump | ? | ? | ?
-`break` | ? | ? | ?
+`System.Math` | System.Math is a static class containing many useful functions for numbers | ? | new slide https://github.com/marczaku/csharp-basics/blob/main/slides/003.3.2-console-basics-2.md
+`static` | Static means, it can not be instantiated, you can not write Math math = new Math(); | ? | ?
+`Math.Max` | Returns the higher number of two | ? | ?
+`Math.Min` | Returns lower number. These can be used to determine minimum/maximum number and prevent user from going over/under | ? | ?
+`Math.Sqrt` | Double Sqrt(double) returns square root | ? | ?
+`Math.Abs` | Most muscular math, also: double Abs(double) returns the absolute of a number, which is always positive. Useful for calculating distances.  | ? | ?
+`Math.Round` | Double Round(double) returns the rounded value of a number (closest integer) | ? | ?
+`Math.Floor` | Double Floor(double) returns the value of the number rounded to the lower integer | ? | ?
+`Math.Ceiling` | Raising the ceiling...and returns value rounded to higher integer | ? | ?
+`Math.Clamp` | CLAMPS!!! Also clamps value to not go over/under paramaters set | ? | ?
+`Math.Pow` | POWERRRRRR! Also; double Pow(double value, double power) returns the value to the power of power | ? | ?
+`string.Length` | Returns the length of a string | ? | ?
+`string.ToUpper` | make string all uppercase or all lowercase(useful for removing case sensitivity in input) | ? | ?
+`string.+` | Allows to extend text: i.e. "bleebloob" + "blooblaab" | ? | ?
+`$"{}"` | interpolation, i.e. lets us use the sweet curlies in text: {} | ? | ?
+`string.[]` | return character at any index of a string | ? | ?
+`string.IndexOf` | You can also get the index of the first occurance of a character or string. Again, counting starts at 0 | ? | ?
+`string.SubString(int)` | You can get a sub-part of a string starting at a certain index (1) until the end of the string | ? | ?
+`string.Substring(int, int)` | You can get a sub-part of a string starting at a certain index (1) with a certain length (2) | ? | ?
+`string.Replace` | You can replace all occurances of a character or string with another one | ? | ?
+immutable | Strings are immutable
+That means: A string can never be changed.
+So, when you call a function on a variable, it never changes the variable itself.
+Instead, it returns a new string that you can or need to assign to the same, or a new variable | string fullName = "John Kane";
+fullName.Replace('n', 'd');
+Console.WriteLine(fullName); - John Kane vs string fullName = "John Kane";
+fullName = fullName.Replace('n', 'd');
+Console.WriteLine(fullName); - Johd Kade | ?
+Logical Operators | A logical operator is a symbol or word used to connect two or more expressions such that the value of the compound expression produced depends only on that of the original expressions and on the meaning of the operator. Common logical operators include AND(&&), OR(||), and NOT(!). | don't forget that variable may need to be called again after operators been used. | ?
+`!` | NOT | ? | ?
+`&&` | AND? | ? | ?
+`||` | OOOOOR... | ? | ?
+Comparison Operators | Comparision operators can compare two values and return a bool (true or false) | ? | ?
+`>` | Grater than or < Lass than | ? | ?
+`==` | Equals | ? | ?
+`!=` | Not equals | ? | ?
+`||` | Our | ? | ?
+`>=` | Grater than or Eqal too | ? | ?
+`<=` | Smoler thon or Eqal too | ? | ?
+`if` | if only | ? | ?
+`else` | gimme me monay or else | ? | ?
+`else if` | extension of if but not end of if statement | ? | ?
+`? :` | ???????? used in ternary if-operator, i.e. shortcut | string greeting = condition ? then-value : else-value;
+string greeting = condition ? true-value : false-value; | ? | ?
+`System.Random` | Allows us to generate random numbers | ? | ?
+pseudo-random | The numbers are pseudo-random: they are using complex mathematical operations to make them appear random*
+They are guaranteed to be evenly ditributed across all numbers| ? | ?
+seed | You use a seed to determine, which sequence of numbers you want to have That‘s a feature: we can reproduce the same random numbers if we know the seed. | ? | ?
+`Random.Next(int, int)` | int Next(int min, int max) receives a new random integer between 0 (inclusive) and 5 (exclusive), so either 0, 1, 2, 3 or 4 | ? | ?
+`int Next()` | int Next() gets a random integer between 0 and int.MaxValue (1.2 bln) | ? | ?
+`double NextDouble()` | double NextDouble() Receive a new randomNumber between 0 (inclusive) and 1 (exclusive), so anything between 0.000000 and 0.9999999 | ? | ?
+`Random.Next()` | kinda random, no? | ? | ?
+`while` | You can use the while-keyword in combination with a bool-expression to form
+a loop that repeats as long as the bool-expression returns true | ? | https://github.com/marczaku/csharp-basics/blob/main/slides/003.3.3-console-basics-3.md
+bool-expression | while(condition-expression) | { // while-scope-start
+  // put the code here, that you want to repeat while the bool-expression is true
+} // while-scope-end | ?
+`do..while` |do..while-loops are very similar to while-loops
+but while while-loops first check the condition and then execute the code...do..while-loops first execute the code and then check the condition
+Therefore, the code in the loop is guaranteed to execute AT LEAST once! | while while while while. In essence, its all about the order of checks | ?
+`for` | Very often in programming, we encounter the situation, where we want to use a loop to iterate with the same routine multiple times: Enter FOR LOOOOOOOOP! | ? | https://github.com/marczaku/csharp-oop/blob/main/slides/003.3.5-console-basics-4.md
+iteration statement | An Iteration is just a fancy word for a loop. An Iteration statement will perform operations a set number of times until you tell it to stop, with a true or false value. Iteration statements also depend on an expression being evaluated until a that expression evaluates to false. This is called “loop termination criteria” and depends on Boolean values being evaluated. | ? | ?
+loop body | What runs if condition statement is met | ? | ?
+loop | loop goes in a loop goes in a loop goes in a loop goes in a loop goes in a loop goes in a loop goes in a loop | ? | ?
+execution | Not THAT kind of execution...it's just executing code | ? | ?
+execution jump | Execution jumps back to the condition each time | ? | ?
+`break` | Time to break the break by taking a short break! | ? | ?
 `continue` | ? | ? | ?
 `Array` | ? | ? | ?
 `int[]` | ? | ? | ?
