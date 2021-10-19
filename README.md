@@ -215,3 +215,4 @@ Abstraction | ? | ? | ?
 Implementation | ? | ? | ?
 Composition | ? | ? | ?
 "Composition over Inheritance" | ? | ? | ?
+"Parse / Parsing" | converting text / strings to another type | Also; Extracting information from text. | ?
